@@ -1,4 +1,4 @@
-package com.mingui.dallija.compose.theme
+package com.mingui.dallija.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
