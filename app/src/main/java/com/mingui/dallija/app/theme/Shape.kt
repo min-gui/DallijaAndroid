@@ -1,4 +1,4 @@
-package com.mingui.dallija.ui.theme
+package com.mingui.dallija.presentation.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

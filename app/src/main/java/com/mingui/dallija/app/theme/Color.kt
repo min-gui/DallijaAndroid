@@ -1,4 +1,4 @@
-package com.mingui.dallija.ui.theme
+package com.mingui.dallija.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

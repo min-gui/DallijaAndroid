@@ -1,4 +1,4 @@
-package com.mingui.dallija.ui.navigation
+package com.mingui.dallija.app.navigation
 
 sealed class Screen(val route: String) {
     object Splash : Screen("splash_screen")

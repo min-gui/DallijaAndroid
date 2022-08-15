@@ -1,4 +1,4 @@
-package com.mingui.dallija.ui.navigation
+package com.mingui.dallija.app.navigation
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,8 +11,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.mingui.dallija.ui.AnimatedSplashScreen
-import com.mingui.dallija.ui.theme.DallijaTheme
+import com.mingui.dallija.presentation.AnimatedSplashScreen
+import com.mingui.dallija.presentation.theme.DallijaTheme
 
 @Composable
 fun SetupNavGraph(navController: NavHostController) {

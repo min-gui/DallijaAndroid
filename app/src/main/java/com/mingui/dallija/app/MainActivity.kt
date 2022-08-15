@@ -1,4 +1,4 @@
-package com.mingui.dallija.ui
+package com.mingui.dallija.app
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.os.Bundle
@@ -27,8 +27,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.mingui.dallija.R
-import com.mingui.dallija.ui.theme.DallijaTheme
-import kotlin.coroutines.coroutineContext
+import com.mingui.dallija.presentation.theme.DallijaTheme
 
 class MainActivity : ComponentActivity() {
 
@@ -203,7 +202,6 @@ fun OnBoardingPreview() {
     uiMode = UI_MODE_NIGHT_YES,
     name = "DefaultPreviewDark"
 )
-@Preview(showBackground = true, widthDp = 320)
 @Composable
 fun DefaultPreview() {
     DallijaTheme {

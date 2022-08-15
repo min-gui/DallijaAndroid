@@ -1,10 +1,9 @@
-package com.mingui.dallija.ui
+package com.mingui.dallija.presentation
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
@@ -20,9 +19,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.mingui.dallija.ui.navigation.Screen
-import com.mingui.dallija.ui.theme.DallijaTheme
-import com.mingui.dallija.ui.theme.Teal200
+import com.mingui.dallija.app.navigation.Screen
+import com.mingui.dallija.presentation.theme.DallijaTheme
 import kotlinx.coroutines.delay
 
 @Composable
