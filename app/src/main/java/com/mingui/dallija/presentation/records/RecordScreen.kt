@@ -13,11 +13,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
+import com.mingui.dallija.app.OnboardingScreen
+import com.mingui.dallija.app.navigation.SetupNavGraph
 import com.mingui.dallija.presentation.records.components.OderSection
 import com.mingui.dallija.presentation.records.components.RecordItem
+import com.mingui.dallija.presentation.theme.DallijaTheme
 import kotlinx.coroutines.launch
 
 @Composable
@@ -118,6 +123,16 @@ fun RecordScreen(
             }
         }
     }
+    
 
+}
 
+@Preview(showBackground = true, widthDp = 320, heightDp = 320, name = "OnBoardingPreview")
+@Composable
+fun OnBoardingPreview() {
+    DallijaTheme {
+        val navController = rememberNavController()
+                SetupNavGraph(navController = navController)
+        RecordScreen(navController = navController)
+    }
 }

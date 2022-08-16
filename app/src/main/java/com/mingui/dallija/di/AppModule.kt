@@ -1,17 +1,17 @@
 package com.mingui.dallija.di
 
 import android.app.Application
+import android.content.Context
 import androidx.room.Room
 import com.mingui.dallija.data.dao.LocalRecordDatabase
+import com.mingui.dallija.data.repository.AutoLoginRepository
 import com.mingui.dallija.data.repository.RecordRepositoryImpl
 import com.mingui.dallija.domain.repository.RecordRepository
-import com.mingui.dallija.domain.usecase.AddRecord
-import com.mingui.dallija.domain.usecase.DeleteRecord
-import com.mingui.dallija.domain.usecase.GetRecords
-import com.mingui.dallija.domain.usecase.RecordUseCases
+import com.mingui.dallija.domain.usecase.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
@@ -42,7 +42,16 @@ object AppModule {
         return RecordUseCases(
             getRecords = GetRecords(repository),
             deleteRecord = DeleteRecord(repository),
-            addRecord =  AddRecord(repository)
+            addRecord =  AddRecord(repository),
+            getRecord = GetRecord(repository)
         )
     }
+
+    @Provides
+    @Singleton
+    fun provideAutoLoginRepository(
+        @ApplicationContext context: Context
+    ) = AutoLoginRepository(context)
+
+
 }

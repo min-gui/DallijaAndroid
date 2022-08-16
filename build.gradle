@@ -9,6 +9,7 @@ buildscript {
         coroutine_core_version = '1.6.1'
         coroutine_android_version = '1.6.1'
         room_version = '2.4.2'
+        datastore_version = '1.0.0'
     }
 
 
